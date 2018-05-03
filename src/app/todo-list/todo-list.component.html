@@ -1,0 +1,105 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    <b>Todo List</b>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <span class="nav-link todo-count text-warning"> {{nbItemunchecked()}} {{getLabelLeft()}} </span>
+      </li>
+      <li class="divider"></li>
+      <li class="nav-item">
+        <span class="nav-link text-info">Filtrer par :</span>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link filterAll"
+        (click) = "currentFilter = filterAll;"
+        [class.active] = "currentFilter === filterAll"
+        >Tous</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link filterActives"
+        (click) = "currentFilter = filterUndone;"
+        [class.active] = "currentFilter === filterUndone"
+        >Actifs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link filterCompleted"
+        (click) = "currentFilter = filterDone;"
+        [class.active] = "currentFilter === filterDone"
+        >Complétés</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  clear-completed text-danger"
+        [hidden] = "nbItemChecked() === 0"
+        (click) = "removeDoneItems()"
+        >Supprimer cochées</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<button type="button" 
+(click) = "undo()"
+class="btn btn-warning">&#8630; Undo</button>
+
+
+
+<button type="button" 
+(click) = "redo()"
+class="btn btn-info float-right">&#8631; Redo</button>
+
+
+<section class="todoapp">
+  <header class="header">
+
+    <form (submit)="appendItem(newTodoInput.value); newTodoInput.value=''">
+      <input class="form-control" #newTodoInput
+      name        = "newTodoInput"
+      class       = "new-todo"
+      placeholder = "Que faire?"
+      autofocus />
+    </form>
+  </header>
+
+  <section class="main">
+    <input  class="toggle-all"
+            type="checkbox"
+            name="toggleAll"
+            [ngModel]="isAllDone()"
+            [hidden] = "isEmpty()"
+            (ngModelChange)="changeToggleAll()"
+    />
+
+    <ul class="todo-list">
+      <li *ngFor="let item of getFilteredItems()"
+          [class.editing] = "compoItem.isEditing"
+          [class.completed] = "compoItem.getIsDone()"
+      >
+      <app-todo-item #compoItem [data]="item">
+      </app-todo-item>
+    </li>
+  </ul>
+
+</section>
+</section>
+
+<input type="file" id="input-file"  accept="image/*" 
+      [(ngModel)]="file_text"
+      [hidden] = "true"
+      (change)="onFileChange($event)"/>
+<button type="button" 
+        (click) = "redo()"
+        class="btn btn-danger float-right" 
+        onclick="document.querySelector('#input-file').click()">Import QrCode
+          <!-- <i class="fa fa-upload" aria-hidden="true"></i> <i class="fa fa-qrcode" aria-hidden="true"></i> --></button>
+
+<button type="button" 
+        (click) = "openQrDialog()"
+        class="btn btn-success float-right" >Export QrCode   
+        <!-- <fa name="download" animation="pull"></fa><fa name="qrcode" animation="spin"></fa> --></button>
+

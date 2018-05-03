@@ -1,0 +1,85 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "l3-m-tp4v2"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico",
+        "manifest.json"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "styles.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.css",
+        "../node_modules/font-awesome/css/font-awesome.css"
+      ],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.bundle.js",
+        "./custom_script.js",
+        "./assets/js/jsqrcode/grid.js",
+        "./assets/js/jsqrcode/version.js",
+        "./assets/js/jsqrcode/detector.js",
+        "./assets/js/jsqrcode/formatinf.js",
+        "./assets/js/jsqrcode/errorlevel.js",
+        "./assets/js/jsqrcode/bitmat.js",
+        "./assets/js/jsqrcode/datablock.js",
+        "./assets/js/jsqrcode/bmparser.js",
+        "./assets/js/jsqrcode/datamask.js",
+        "./assets/js/jsqrcode/rsdecoder.js",
+        "./assets/js/jsqrcode/gf256poly.js",
+        "./assets/js/jsqrcode/gf256.js",
+        "./assets/js/jsqrcode/decoder.js",
+        "./assets/js/jsqrcode/qrcode.js",
+        "./assets/js/jsqrcode/findpat.js",
+        "./assets/js/jsqrcode/alignpat.js",
+        "./assets/js/jsqrcode/databr.js"
+      ],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      },
+      "serviceWorker": true
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "src/tsconfig.spec.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "component": {}
+  }
+}

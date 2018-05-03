@@ -1,0 +1,4 @@
+<app-todo-list [data]="getCurrentTodoList()"
+				(keydown.control.z)="undo()"
+				(keydown.control.y)="redo()">	
+</app-todo-list>

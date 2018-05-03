@@ -1,0 +1,87 @@
+{
+  "configVersion": 1,
+  "index": "/index.html",
+  "appData": {
+    "name": "Todo List PWA",
+    "description": "Implemented update flow"
+  },
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/inline.31e1fb380eb7cf3d75b1.bundle.js",
+        "/main.c114dabb65ed059b472a.bundle.js",
+        "/polyfills.d85c389504c14c731dcb.bundle.js",
+        "/scripts.b11ab2c5f6de995a88f8.bundle.js",
+        "/styles.44b882c3add7b8f39746.bundle.css",
+        "/vendor.c51512b383f235c93c19.bundle.js"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/assets/icon-128x128.png",
+        "/assets/icon-152x152.png",
+        "/assets/icon-256x256.png",
+        "/assets/icon-512x512.png",
+        "/assets/js/jsqrcode/alignpat.js",
+        "/assets/js/jsqrcode/bitmat.js",
+        "/assets/js/jsqrcode/bmparser.js",
+        "/assets/js/jsqrcode/datablock.js",
+        "/assets/js/jsqrcode/databr.js",
+        "/assets/js/jsqrcode/datamask.js",
+        "/assets/js/jsqrcode/decoder.js",
+        "/assets/js/jsqrcode/detector.js",
+        "/assets/js/jsqrcode/errorlevel.js",
+        "/assets/js/jsqrcode/findpat.js",
+        "/assets/js/jsqrcode/formatinf.js",
+        "/assets/js/jsqrcode/gf256.js",
+        "/assets/js/jsqrcode/gf256poly.js",
+        "/assets/js/jsqrcode/grid.js",
+        "/assets/js/jsqrcode/qrcode.js",
+        "/assets/js/jsqrcode/rsdecoder.js",
+        "/assets/js/jsqrcode/version.js"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/inline.31e1fb380eb7cf3d75b1.bundle.js": "afe1b233aaffec401067c782e7080cd11903896e",
+    "/assets/icon-128x128.png": "59c07184ab2d3abc48a9ffc0a6ec74563ff7cd36",
+    "/main.c114dabb65ed059b472a.bundle.js": "5de6f87d7ca9b2c041c3705f0756ec3a54d56dfd",
+    "/assets/icon-152x152.png": "1820d20f28fed2d420f73f16ddf5110a9cbb6102",
+    "/polyfills.d85c389504c14c731dcb.bundle.js": "f464d65d3acb34e0bb4c480cf0832aa70bcf020b",
+    "/assets/icon-256x256.png": "5e8ecd10448ae979e2c755c2ee27ed8eed2a11a3",
+    "/scripts.b11ab2c5f6de995a88f8.bundle.js": "b92b338fdf7285ebe6bd1a8ba944d6832f23ca96",
+    "/assets/icon-512x512.png": "b86901090c55da27b73e74ee865d1db02bfadd4d",
+    "/styles.44b882c3add7b8f39746.bundle.css": "179f2cf4265eb64baf8fe1ba7a6493cb13d95af9",
+    "/assets/js/jsqrcode/alignpat.js": "1a20bf96a1310a6312024a9dabfeec8918427b72",
+    "/vendor.c51512b383f235c93c19.bundle.js": "f709015985cb4f713a7f62e6cea1bc8d7724d6b1",
+    "/assets/js/jsqrcode/bitmat.js": "e202fffd4f762fddc8527146c906bc2cafe37d37",
+    "/favicon.ico": "3f4856ad7065b29eae8c57331a9eec2aab01fbe6",
+    "/assets/js/jsqrcode/bmparser.js": "cdff30e1448d97a1d316f42f0b282552cfe42b8c",
+    "/index.html": "4976005fb3203db6a12b926ce9701cb1de9cb053",
+    "/assets/js/jsqrcode/datablock.js": "def2bd0136009f79344fad4d49e29c9f08f6b6c9",
+    "/assets/js/jsqrcode/databr.js": "ce94a9607e9490b42d2f50f20c169c5e28473bf9",
+    "/assets/js/jsqrcode/datamask.js": "a46372b3e3fbc761ec37791a36d3e71a29bc0064",
+    "/assets/js/jsqrcode/decoder.js": "48fa7390e2ba876ca2cb2615d3ddcd5c5561737a",
+    "/assets/js/jsqrcode/detector.js": "4a40ee88493d22060f3818beec72c8d782c6a3c7",
+    "/assets/js/jsqrcode/errorlevel.js": "196ab425c77bf2314d6ead2689be59bf9cdbe08d",
+    "/assets/js/jsqrcode/findpat.js": "8671fbd3fae4c95e23055180ad0ba1abc3bebccc",
+    "/assets/js/jsqrcode/formatinf.js": "5f43ea1b80f23d496aefb8b6550360c03757545d",
+    "/assets/js/jsqrcode/gf256.js": "b2c88db0c128288254a6a9f0dcc7992955c6b74b",
+    "/assets/js/jsqrcode/gf256poly.js": "31b8428677b82236b215f1f13afdfa90df331cba",
+    "/assets/js/jsqrcode/grid.js": "07246c51a5fc6fa571466380d7c03652c484311f",
+    "/assets/js/jsqrcode/qrcode.js": "5beb36cfeda84408367f20b4139f7939111dc144",
+    "/assets/js/jsqrcode/rsdecoder.js": "a4c0b041fbf01cbae9048d10cb22b18a82bb1be0",
+    "/assets/js/jsqrcode/version.js": "4452f22650a81c59424eba73cf241e1ce68f0b18"
+  }
+}

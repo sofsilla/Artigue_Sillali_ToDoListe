@@ -1,0 +1,37 @@
+{
+  "index": "/index.html",
+  "appData": {
+    "name": "Todo List PWA",
+    "description": "Implemented update flow"
+  },
+  "external": {
+    "urls": [
+      {"url": "https://use.fontawesome.com/releases/v5.0.10/css/all.css"}
+    ]
+  },
+  "assetGroups": [{
+    "name": "app",
+    "installMode": "prefetch",
+    "resources": {
+      "files": [
+        "/favicon.ico",
+        "/index.html"
+      ],
+      "versionedFiles": [
+        "/*.bundle.css",
+        "/*.bundle.js",
+        "/*.chunk.js"
+      ]
+    }
+  }, {
+    "name": "assets",
+    "installMode": "lazy",
+    "updateMode": "prefetch",
+    "resources": {
+      "files": [
+        "/assets/**"
+      ]
+    }
+  }]
+}
+

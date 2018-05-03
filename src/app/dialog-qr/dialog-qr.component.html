@@ -1,0 +1,25 @@
+
+<mat-dialog-content>
+
+	<div *ngIf="qrCodeData==''; else qrC">
+	    Votre liste est vide
+	</div>
+
+	<ng-template #qrC>
+		<a href="#" onclick="prepHref(this)" download>
+			<qrcode id="qrContainer" class="btn btn-dark center" 
+			[qrdata]="qrCodeData" 
+			[size]="512"
+			[level]="'H'"></qrcode>
+		</a>
+	</ng-template>
+
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+	<a href="#" *ngIf="qrCodeData!='';" onclick="prepHref(this)" download><button matDialogClose="confirm" mat-button color="primary">Télécharger</button></a>
+	<button mat-button matDialogClose="confirm" color="warn">Fermer</button>
+</mat-dialog-actions>
+
+
+

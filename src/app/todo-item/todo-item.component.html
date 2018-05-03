@@ -1,0 +1,24 @@
+<div class="view">
+  <input  class 	= "toggle"
+          type		= "checkbox"
+          name		= "fait"
+          [ngModel] = "getIsDone()"
+          (ngModelChange) = "setIsDone($event)"
+  />
+  <label  class="texte"
+  		  (dblclick) = "setIsEditing(true)"
+  		>{{getLabel()}}</label>
+  <button class="destroy"
+  	(click) = "remove()">
+  </button>
+</div>
+
+<form  (submit) = "editItem(newTextInput.value)">
+
+  <input style="width: calc(100% - 42px);" #newTextInput
+          name    		= "newTextInput"
+          class   		= "edit"
+          [ngModel] 	= "getLabel()"
+  		    (blur) 		  = "editItem(newTextInput.value)"
+          />
+</form>
