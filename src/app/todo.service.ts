@@ -3,6 +3,8 @@ import {TodoListData} from './dataTypes/TodoListData';
 import {Observable} from 'rxjs/Observable';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 import {TodoItemData} from './dataTypes/TodoItemData';
+import { DialogQrComponent }  from './dialog-qr/dialog-qr.component';
+import { MatDialog } from '@angular/material';
 
 @Injectable()
 export class TodoService {
@@ -11,7 +13,7 @@ export class TodoService {
   undoRedo :[TodoItemData[]] = [[]];
   indexUndoRedo = 0;
 
-  constructor() {
+  constructor(public dialog: MatDialog) {
     this.todoListSubject.value.items = this.getItemsLocalStorage();
     this.undoRedo[0] = this.todoListSubject.value.items ;
   }
@@ -127,6 +129,14 @@ export class TodoService {
       this.todoListSubject.value.items = items;
       this.setItemsLocalStorage(this.todoListSubject.value.items);
       this.addUndoRedoAction(this.todoListSubject.value.items);
+    }
+    else{
+      let dialog = this.dialog.open(DialogQrComponent, {
+         data: {
+          msg: "Erreur QrCode"
+        }
+      });
+  
     }
   }
 

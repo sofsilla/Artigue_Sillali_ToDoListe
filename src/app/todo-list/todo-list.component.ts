@@ -124,7 +124,7 @@ export class TodoListComponent implements OnInit {
     console.log(this.getItems());
     let dialog = this.dialog.open(DialogQrComponent, {
        data: {
-        items: this.getItems()
+        items: this.getItems(), msg: this.isEmpty() ? 'Votre liste est vide' : ''
       }
     });
   }

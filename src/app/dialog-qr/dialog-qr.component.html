@@ -1,8 +1,8 @@
 
 <mat-dialog-content>
 
-	<div *ngIf="qrCodeData==''; else qrC">
-	    Votre liste est vide
+	<div *ngIf="msg!=''; else qrC">
+	    {{msg}}
 	</div>
 
 	<ng-template #qrC>
